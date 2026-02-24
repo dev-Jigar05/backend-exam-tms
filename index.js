@@ -6,7 +6,7 @@ const commentRoutes = require("./routes/commentRoutes");
 const db = require("./config/db");
 const fs = require("fs");
 
-// Apply schema automatically
+
 setTimeout(() => {
     const schemaSql = fs.readFileSync('./schema.sql', 'utf8');
     schemaSql.split(';').forEach(async (query) => {
@@ -14,7 +14,7 @@ setTimeout(() => {
             try {
                 await db.query(query);
             } catch (e) {
-                // Ignore safe errors like 'already exists'
+
             }
         }
     });

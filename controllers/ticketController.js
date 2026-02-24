@@ -60,7 +60,7 @@ const ticketController = {
       res.json(result.rows);
     } catch (e) {
       console.error(e);
-      res.status(500).json({ error: "Failed to retrieve tickets." });
+      res.status(500).json({ error: "Failed to get tickets." });
     }
   },
 

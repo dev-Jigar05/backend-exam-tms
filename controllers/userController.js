@@ -43,7 +43,7 @@ const userController = {
             ]);
 
             if (roleRes.rows.length === 0) {
-                return res.status(400).send("bad role");
+                return res.status(400).send("wrong role");
             }
 
             const roleId = roleRes.rows[0].id;
